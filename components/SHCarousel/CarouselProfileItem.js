@@ -26,15 +26,24 @@ export default class CarouselProfileItem extends Component {
                 }}
             >
                 
-                <TouchableOpacity
-                    onPress = {()=>{Alert.alert(fullname)}}
-                >
+                
                     <CarouselProfileImage 
                         fullname = {fullname}
                         image = {placeholder}
                     />
-                    <CarouselProfileDetails profile={this.props.item}/>
+                    <TouchableOpacity
+                    onPress = {()=>{Alert.alert(fullname)}}
+                    style ={{
+                        position:'absolute',
+                        top : 0,
+                        bottom : 0,
+                        left : 0,
+                        right : 0
+                    }}
+                >
                 </TouchableOpacity>
+                    <CarouselProfileDetails profile={this.props.item}/>
+                
                     
                 
                 <TouchableOpacity
