@@ -8,17 +8,34 @@ import CarouselProfileItem from './SHCarousel/CarouselProfileItem';
 
 export default class SHCarouselProfile extends Component {
 
+
     render(){
 
         return(
             <View
                 style={{
                     flex:1,
-                    flexDirection:'row',
-                    alignItems : 'center'
+                    flexDirection:'column',
+                    alignItems : 'flex-start',
+                    justifyContent : 'center',
+                    
                 }}
             >
-                
+                <View
+                    style ={{
+                        paddingLeft: 15,
+                        paddingRight:15,
+                        height : 30,
+                        backgroundColor : "#F1F1F2",
+                        flexDirection : 'row',
+                        alignItems : 'center',
+                        alignSelf : 'stretch'
+                    }}
+                >
+                    <Text
+                        numberOfLines = {1}
+                    >{`${this.props.section} (${carouselFlatListData.length})`}</Text>
+                </View>
                 <View 
                     style = {{
                         height : 332,
@@ -32,7 +49,7 @@ export default class SHCarouselProfile extends Component {
                     <View 
                         style = {{
                             height : 275
-                    }}>
+                        }}>
                         <FlatList
                             style = {{
                                 backgroundColor:'white'
@@ -58,20 +75,21 @@ export default class SHCarouselProfile extends Component {
                             Alert.alert('See All')
                         }}
                     >
-                    <View
-                        style = {{
-                            height : 35,
-                            flexDirection : 'row',
-                            alignItems : 'flex-end',
-                            justifyContent : 'center'
-                        }}
-                    >
-                        <Text
+                        <View
                             style = {{
-                                color : "#03BBD5"
+                                height : 35,
+                                flexDirection : 'row',
+                                alignItems : 'flex-end',
+                                justifyContent : 'center',
+                                backgroundColor : '#fff'
                             }}
-                        >See All</Text>
-                    </View>
+                        >
+                            <Text
+                                style = {{
+                                    color : "#03BBD5"
+                                }}
+                            >See All</Text>
+                        </View>
                     </TouchableOpacity>
                 </View>
             </View>

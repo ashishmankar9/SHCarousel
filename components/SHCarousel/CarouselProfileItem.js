@@ -12,7 +12,7 @@ export default class CarouselProfileItem extends Component {
         const fullname = `${this.props.item.name.first} ${this.props.item.name.last}`
         
         return(
-
+            
             <View
                 style = {{
                     flex : 1,
@@ -25,6 +25,7 @@ export default class CarouselProfileItem extends Component {
                     margin : 4
                 }}
             >
+                
                 <TouchableOpacity
                     onPress = {()=>{Alert.alert(fullname)}}
                 >
