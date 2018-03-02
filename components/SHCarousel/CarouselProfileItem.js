@@ -31,6 +31,8 @@ export default class CarouselProfileItem extends Component {
                         fullname = {fullname}
                         image = {placeholder}
                     />
+                    
+                    <CarouselProfileDetails profile={this.props.item}/>
                     <TouchableOpacity
                     onPress = {()=>{Alert.alert(fullname)}}
                     style ={{
@@ -42,8 +44,6 @@ export default class CarouselProfileItem extends Component {
                     }}
                 >
                 </TouchableOpacity>
-                    <CarouselProfileDetails profile={this.props.item}/>
-                
                     
                 
                 <TouchableOpacity
